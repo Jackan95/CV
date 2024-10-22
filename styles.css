@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    overflow: hidden;
+}
+
+.game-container{
+    position: relative;
+    width: 352px;
+    height: 198px;
+    margin: 0 auto;
+    outline: 1px solid black;
+    transform: scale(3) translateY(50%);
+
+    }
+
+.game-container canvas{
+    image-rendering: pixelated;
+}
+
+.popup-box {
+    position: absolute;
+    bottom: 280px; /* Move higher up */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px; /* Increased padding for a bigger look */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.5rem; /* Increase font size */
+
+    
+}
