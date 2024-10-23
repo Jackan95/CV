@@ -13,13 +13,36 @@
     </head>
 
     <body>
-
+        <nav>
+            <ul>
+                
+                <li><a href="/logout">Logout</a></li>
+            </ul>
         <header>
-            <h1>CV website</h1>
+            <h1>Hello, {{ username }}</h1>
         </header>
         <div class="game-container">
             <canvas class="game-canvas" width="352" height="198"></canvas>
         </div>
+
+        <div class="container">
+            <h2>Comment</h2>
+            <form method="POST" action="{{ url_for('index') }}">
+                <label for="username">Comment</label>
+                <input type="text" id="comment" name="comment" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <h2>Comments</h2>
+        <ul>
+            {% for comment in comments %}
+                <li>{{ comment.content }} - {{ comment.author.username }}</li>
+            {% endfor %}
+        </ul>
+
+
+
 
         <!-- Load scripts via Flask's url_for -->
         <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
