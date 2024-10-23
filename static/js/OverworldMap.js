@@ -34,14 +34,14 @@ class OverworldMap{
     window.OverworldMaps = {
 
         Bedroom: {
-            lowerSrc: "images/maps/CVroom.png",
-            upperSrc: "images/maps/wardrobe.png",
+            lowerSrc: "static/images/maps/CVroom.png",
+            upperSrc: "static/images/maps/wardrobe.png",
             gameObjects: {
                 hero: new Person({
                     isPlayerControlled: true,
                     x: utils.withGrid(5),
                     y: utils.withGrid(5),
-                    src: "images/characters/hero.png",
+                    src: "static/images/characters/hero.png",
                 }),
                     
             },
@@ -62,7 +62,7 @@ class OverworldMap{
         },
 
         Computer: {
-            lowerSrc: "images/maps/computer_screen.png",
+            lowerSrc: "static/images/maps/computer_screen.png",
             gameObjects: {
                 hero: new Person({
                     isPlayerControlled: true,

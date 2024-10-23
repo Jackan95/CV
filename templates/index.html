@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CV website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+        <!-- Load styles via Flask's url_for -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>CV website</h1>
+        </header>
+        <div class="game-container">
+            <canvas class="game-canvas" width="352" height="198"></canvas>
+        </div>
+
+        <!-- Load scripts via Flask's url_for -->
+        <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/DirectionInput.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/Overworld.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/GameObject.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/Person.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/Sprite.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/OverworldMap.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+    </body>
+
+</html>
+
