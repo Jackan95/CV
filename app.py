@@ -74,30 +74,6 @@ def logout():
     return redirect(url_for('login'))
 
 
-def add_initial_data():
-    # Add initial users
-    if not User.query.filter_by(username='user1').first():
-        user1 = User(username='user1', password=generate_password_hash('password1'))
-        db.session.add(user1)
-    if not User.query.filter_by(username='user2').first():
-        user2 = User(username='user2', password=generate_password_hash('password2'))
-        db.session.add(user2)
-    db.session.commit()
-
-    # Add initial comments
-    user1 = User.query.filter_by(username='user1').first()
-    user2 = User.query.filter_by(username='user2').first()
-    if user1 and not Comment.query.filter_by(content='This is a comment from user1').first():
-        comment1 = Comment(content='This is a comment from user1', author=user1)
-        db.session.add(comment1)
-    if user2 and not Comment.query.filter_by(content='This is a comment from user2').first():
-        comment2 = Comment(content='This is a comment from user2', author=user2)
-        db.session.add(comment2)
-    db.session.commit()
-
-
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()  # Create the database tables
-        add_initial_data() 
+    
     app.run(debug=True)

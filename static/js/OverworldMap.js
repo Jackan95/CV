@@ -56,8 +56,8 @@ class OverworldMap{
             },
             places: [
                 { x: 6, y: 4, direction: 'up', message: 'Bachelor in Information Systems' },
-                { x: 9, y: 4, direction: 'up', message: 'Certificate: Harvard CS50x' },
-                
+                { x: 9, y: 4, direction: 'up', message: 'Certificate: Harvard CS50X' },
+                { x: 2, y: 5, direction: 'up'}
             ]
         },
 
