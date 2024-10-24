@@ -69,16 +69,14 @@
 
         <div class="container2">
             <h2>Comment</h2>
-            <form method="POST" action="{{ url_for('index') }}">
+            <form method="POST" action="{{ url_for('index') }}" id = "commentForm">
                 <input type="text" id="comment" name="comment" maxlength="50" required>
                 <button type="submit">Send</button>
             </form>
         </div>
 
         <h3>Recent comments</h3>
-        <div class="container3">
-            
-            
+        <div class="container3" id="comments-container">
                 {% for comment in comments %}
                 <div class="comment-bubble">
                     <div class="comment">
@@ -90,6 +88,26 @@
             
         </div>
 
+        <script>
+            document.getElementById('commentForm').addEventListener('submit', function(e) {
+                e.preventDefault();  // Prevent normal form submission
+        
+                let formData = new FormData(this);  // Collect form data
+        
+                fetch('/submit_comment', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())  // Get response as text (HTML)
+                .then(data => {
+                    document.getElementById('comments-container').innerHTML = data;  // Update comments section
+                    document.getElementById('comment').value = '';  // Clear input field
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
+
+        
 
 
 
