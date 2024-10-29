@@ -53,6 +53,12 @@ def index():
 @login_required
 def submit_comment():
     content = request.form['comment']
+    if len(content) == 0:
+        flash('Comment cannot be empty.', 'danger')
+        return redirect(url_for('index'))
+    if len(content) > 50:
+        flash('Comment cannot be longer than 200 characters.', 'danger')
+        return redirect(url_for('index'))
     
     # Create a new comment
     comment = Comment(content=content, author=current_user)

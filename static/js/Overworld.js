@@ -70,6 +70,7 @@ class Overworld{
         
     }
 
+    
     checkPlayerPositionAndDirection() {
         const player = this.map.gameObjects.hero;
         this.map.places.forEach(place => {
@@ -83,6 +84,7 @@ class Overworld{
         });
     }
 
+    //Written with collaboration of Github Copilot
     handleMouseClick(event) {
         const canvasRect = this.ctx.canvas.getBoundingClientRect();
         const x = event.clientX - canvasRect.left;
@@ -109,6 +111,7 @@ class Overworld{
         this.startGameLoop();    
     }
 
+    //Written with collaboration of Github Copilot
     showPopup(message) {
         let popupBox = document.querySelector('.popup-box');
         if (!popupBox) {
