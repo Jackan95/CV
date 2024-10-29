@@ -1,5 +1,5 @@
 # Resume Website
-#### Video Demo:  <URL HERE>
+#### Video Demo:  [(https://youtu.be/S1e1LtdqMoE)]
 ## Project Description
 
 This project is an interactive and innovative way of displaying my resume for future employers. Inspired by graphic designers' unique twists on displaying their work on their websites, I decided to create something similar. This project is inspired by Pokémon RPG games and is designed to showcase multiple skills, not only through text but also by interacting with the website. It demonstrates knowledge and skills in graphic design, Photoshop, Python, Flask, JavaScript, HTML, CSS, SQLAlchemy, asynchronous programming, REST and more. Right now the website shows my Bachelor's degree, my future CS50 certificate and an interactive to check out my linkedIn. I had an idea of also displaying my graphic design work when you interact with the closet in the bottom left but the project was starting to get a lot bigger than anticipated so I left it out in order to be on time with submitting this assignment. 
@@ -7,6 +7,10 @@ This project is an interactive and innovative way of displaying my resume for fu
 Despite having limited experience in game development, I conducted extensive research on the topic. I found Drew Conly on YouTube, who provided an excellent tutorial series on game development concepts and building 2D RPG games.
 
 ## Project Documentation
+
+### Controls
+Use the arrow keys to move around. To interact with wall decor and the computer, press 'E' while standing in front of and facing the object. When in first-person view of the computer, use your mouse to navigate.
+
 
 ### Python Files
 
